@@ -14,7 +14,8 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('旅行代行アプリ'),
+        title: Icon(Icons.local_airport),
+        backgroundColor: Color(0xFF68C052),
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
@@ -87,7 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Padding(
               padding: EdgeInsets.symmetric(vertical: 16.0),
               child: Material(
-                color: Colors.lightBlueAccent,
+                color: Color(0xFF68C052),
                 borderRadius: BorderRadius.all(
                   Radius.circular(30.0),
                 ),
@@ -99,29 +100,29 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   minWidth: 200.0,
                   height: 42.0,
-                  child: Text('Log in'),
+                  child: Text('ログイン'),
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                color: Colors.lightBlueAccent,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(30.0),
-                ),
-                elevation: 5.0,
-                child: MaterialButton(
-                  onPressed: () {
-                    // Implement login functionality
-                    Navigator.pushNamed(context, RegistrationScreen.id);
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: Text('Registration Screen'),
-                ),
-              ),
-            ),
+            // Padding(
+            //   padding: EdgeInsets.symmetric(vertical: 16.0),
+            //   child: Material(
+            //     color: Colors.lightBlueAccent,
+            //     borderRadius: BorderRadius.all(
+            //       Radius.circular(30.0),
+            //     ),
+            //     elevation: 5.0,
+            //     child: MaterialButton(
+            //       onPressed: () {
+            //         // Implement login functionality
+            //         Navigator.pushNamed(context, RegistrationScreen.id);
+            //       },
+            //       minWidth: 200.0,
+            //       height: 42.0,
+            //       child: Text('Registration Screen'),
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),
