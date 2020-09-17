@@ -16,7 +16,8 @@ class _TopScreenState extends State<TopScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('旅行代行アプリ'),
+        title: Icon(Icons.local_airport),
+        backgroundColor: Color(0xFF68C052),
       ),
       backgroundColor: Colors.white,
       body: Padding(

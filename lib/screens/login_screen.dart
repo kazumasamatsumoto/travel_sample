@@ -100,7 +100,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   minWidth: 200.0,
                   height: 42.0,
-                  child: Text('ログイン'),
+                  child: Text(
+                    'ログイン',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
             ),
