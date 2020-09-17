@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel_samples/screens/registration_screen.dart';
 import 'package:travel_samples/screens/top_screen.dart';
-import 'package:travel_samples/screens/video_upload.dart';
-import 'package:travel_samples/screens/video_upload_info_screen.dart';
-import 'package:travel_samples/screens/watch_video.dart';
+import 'registration_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String id = 'login_screen';
@@ -16,6 +13,9 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text('旅行代行アプリ'),
+      ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
@@ -27,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 // Do something with the user input.
               },
               decoration: InputDecoration(
-                hintText: 'login screen',
+                hintText: 'enter your email',
                 contentPadding:
                     EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                 border: OutlineInputBorder(
@@ -95,30 +95,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: MaterialButton(
                   onPressed: () {
                     // Implement login functionality
-                    Navigator.pushNamed(context, LoginScreen.id);
+                    Navigator.pushNamed(context, TopScreen.id);
                   },
                   minWidth: 200.0,
                   height: 42.0,
                   child: Text('Log in'),
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                color: Colors.lightBlueAccent,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(30.0),
-                ),
-                elevation: 5.0,
-                child: MaterialButton(
-                  onPressed: () {
-                    // Implement login functionality
-                    Navigator.pushNamed(context, VideoUpload.id);
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: Text('Video Upload'),
                 ),
               ),
             ),
@@ -138,63 +119,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   minWidth: 200.0,
                   height: 42.0,
                   child: Text('Registration Screen'),
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                color: Colors.lightBlueAccent,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(30.0),
-                ),
-                elevation: 5.0,
-                child: MaterialButton(
-                  onPressed: () {
-                    // Implement login functionality
-                    Navigator.pushNamed(context, TopScreen.id);
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: Text('Top Screen'),
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                color: Colors.lightBlueAccent,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(30.0),
-                ),
-                elevation: 5.0,
-                child: MaterialButton(
-                  onPressed: () {
-                    // Implement login functionality
-                    Navigator.pushNamed(context, VideoUploadInfoScreen.id);
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: Text('Video Upload Info Screen'),
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                color: Colors.lightBlueAccent,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(30.0),
-                ),
-                elevation: 5.0,
-                child: MaterialButton(
-                  onPressed: () {
-                    // Implement login functionality
-                    Navigator.pushNamed(context, WatchVideo.id);
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: Text('Watch Video'),
                 ),
               ),
             ),
